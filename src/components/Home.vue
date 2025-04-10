@@ -3,7 +3,7 @@ import Navbar from './Navbar.vue'
 </script>
 
 <template>
-  <Navbar />
+<!--  <Navbar/>-->
   <div>
     <p>This is Home Page</p>
   </div>

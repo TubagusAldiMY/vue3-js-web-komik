@@ -1,9 +1,11 @@
 <script setup>
 
+import Navbar from "./Navbar.vue";
 </script>
 
 <template>
-  $END$
+<!--  <Navbar/>-->
+<p> This is Bookmark Page</p>
 </template>
 
 <style scoped>

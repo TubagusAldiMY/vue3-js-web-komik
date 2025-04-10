@@ -1,9 +1,10 @@
 <script setup>
-
+import Navbar from "./Navbar.vue";
 </script>
 
 <template>
-  $END$
+<!--  <Navbar/>-->
+  <p>This is Explore Page</p>
 </template>
 
 <style scoped>

@@ -2,7 +2,8 @@ import { createApp } from 'vue'
 import './style.css'
 import App from './App.vue'
 import { createRouter, createWebHistory } from 'vue-router'
-import Home from './components/Home.vue'
+
+
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
@@ -18,8 +19,35 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      name: 'Home',
-      component: Home,
+      name: 'Dashboard',
+      component: () => import('./components/Dashboard.vue'),
+      children: [
+        {
+          path: '',
+          name: 'home',
+          component: () => import('./components/Home.vue')
+        },
+        {
+          path: 'explore',
+          name: 'explore',
+          component: () => import('./components/Explore.vue')
+        },
+        {
+          path: 'bookmark',
+          name: 'bookmark',
+          component: () => import('./components/Bookmark.vue')
+        }
+      ]
+    },
+    {
+      path: '/Login',
+      name: 'login',
+      component: () => import('./components/Login-form.vue'),
+    },
+    {
+      path: '/Register',
+      name: 'register',
+      component: () => import('./components/Register-form.vue'),
     }
   ],
   history: createWebHistory(),
@@ -27,6 +55,5 @@ const router = createRouter({
 
 createApp(App)
     .use(router)
-    // .use(pinia)
     .component('font-awesome-icon', FontAwesomeIcon)
     .mount('#app')

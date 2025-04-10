@@ -16,9 +16,9 @@ const search = ref('')
       
       <!-- Navigation links in the center -->
       <div class="flex gap-10">
-        <RouterLink to="/" class="nav-link text-xs lg:text-base">Home</RouterLink>
-        <RouterLink to="/explore" class="nav-link text-xs lg:text-base">Explore</RouterLink>
-        <RouterLink to="/library" class="nav-link text-xs lg:text-base">Bookmark</RouterLink>
+          <RouterLink :to="{ name: 'home'}" class="nav-link text-xs lg:text-base">Home</RouterLink>
+          <RouterLink :to="{ name: 'explore'}" class="nav-link text-xs lg:text-base">Explore</RouterLink>
+          <RouterLink :to="{ name: 'bookmark'}" class="nav-link text-xs lg:text-base">Bookmark</RouterLink>
       </div>
       
       <!-- Search and login on the right -->
@@ -56,24 +56,26 @@ const search = ref('')
       </div>
     </div>
 
+
+
     <!-- Mobile Navigation: Bottom Icons -->
     <div class="md:hidden fixed bottom-0 left-0 right-0 bg-gray-800 flex justify-around p-3">
-      <RouterLink to="/" class="flex flex-col items-center text-[10px] xs:text-xs">
+      <RouterLink :to="{ name: 'home'}" class="flex flex-col items-center text-[10px] xs:text-xs">
         <font-awesome-icon :icon="['fas', 'house']" size="2xl" class="h-5 w-5 sm:h-6 sm:w-6"/>
         <span>Home</span>
       </RouterLink>
-      <RouterLink to="/explore" class="flex flex-col items-center text-[10px] xs:text-xs">
-        <font-awesome-icon :icon="['fas', 'compass']" size="2xl" class="h-5 w-5 sm:h-6 sm:w-6" />
-        <span>Explore</span>
-      </RouterLink>
-      <RouterLink to="/library" class="flex flex-col items-center text-[10px] xs:text-xs">
-        <font-awesome-icon :icon="['fas', 'book-bookmark']" size="2xl" class="h-5 w-5 sm:h-6 sm:w-6" />
-        <span>Bookmark</span>
-      </RouterLink>
-      <RouterLink to="/login" class="flex flex-col items-center text-[10px] xs:text-xs">
-        <font-awesome-icon :icon="['fas', 'user']" size="2xl" class="h-5 w-5 sm:h-6 sm:w-6"/>
-        <span>Login</span>
-      </RouterLink>
+<!--      <RouterLink :to="{ name: 'explore'}" class="flex flex-col items-center text-[10px] xs:text-xs">-->
+<!--        <font-awesome-icon :icon="['fas', 'compass']" size="2xl" class="h-5 w-5 sm:h-6 sm:w-6" />-->
+<!--        <span>Explore</span>-->
+<!--      </RouterLink>-->
+<!--      <RouterLink :to="{ name: 'bookmark'}" class="flex flex-col items-center text-[10px] xs:text-xs">-->
+<!--        <font-awesome-icon :icon="['fas', 'book-bookmark']" size="2xl" class="h-5 w-5 sm:h-6 sm:w-6" />-->
+<!--        <span>Bookmark</span>-->
+<!--      </RouterLink>-->
+<!--      <RouterLink :to="{ name: 'login'}" class="flex flex-col items-center text-[10px] xs:text-xs">-->
+<!--        <font-awesome-icon :icon="['fas', 'user']" size="2xl" class="h-5 w-5 sm:h-6 sm:w-6"/>-->
+<!--        <span>Login</span>-->
+<!--      </RouterLink>-->
     </div>
   </nav>
 </template>

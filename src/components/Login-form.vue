@@ -13,7 +13,7 @@
               id="email"
               type="email"
               v-model="email"
-              class="mt-1 block w-full rounded-md border border-gray-700 bg-gray-700 p-2 text-gray-200 focus:border-blue-500 focus:ring-blue-500"
+              class="mt-1 block w-full rounded-md border border-gray-700 bg-gray-900 p-2 text-gray-200 focus:border-blue-500 focus:ring-blue-500"
               placeholder="Enter your email"
               required
           />
@@ -24,7 +24,7 @@
               id="password"
               type="password"
               v-model="password"
-              class="mt-1 block w-full rounded-md border border-gray-700 bg-gray-700 p-2 text-gray-200 focus:border-blue-500 focus:ring-blue-500"
+              class="mt-1 block w-full rounded-md border border-gray-700 bg-gray-900 p-2 text-gray-200 focus:border-blue-500 focus:ring-blue-500"
               placeholder="Enter your password"
               required
           />
@@ -38,7 +38,8 @@
       </form>
       <p class="mt-4 text-center text-sm text-gray-400">
         Don't have an account?
-        <a href="/register" class="text-blue-500 hover:underline">Sign up</a>
+<!--        <a href="/register" class="text-blue-500 hover:underline">Sign up</a>-->
+        <a class="text-blue-500 hover:underline"><RouterLink :to="{ name: 'register'}" >Sign Up</RouterLink></a>
       </p>
     </div>
   </div>
